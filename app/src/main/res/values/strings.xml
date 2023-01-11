@@ -105,4 +105,6 @@
     <string name="popular">Популярное</string>
     <string name="new_event">Новое</string>
     <string name="past_event">Прошедшее</string>
+    <string name="search">Поиск</string>
+    <string name="moscow">Москва</string>
 </resources>

@@ -16,11 +16,11 @@ class ChoiceFragment : BaseFragment<FragmentChoiceBinding>(
 
         binding.apply {
             registerButton.setOnClickListener {
-                view.findNavController().navigate(R.id.action_mainFragment2_to_registerFragment)
+                view.findNavController().navigate(R.id.action_choiceFragment_to_registerFragment2)
             }
 
             loginButton.setOnClickListener {
-                view.findNavController().navigate(R.id.action_mainFragment2_to_loginFragment)
+                view.findNavController().navigate(R.id.action_choiceFragment_to_loginFragment2)
             }
         }
     }

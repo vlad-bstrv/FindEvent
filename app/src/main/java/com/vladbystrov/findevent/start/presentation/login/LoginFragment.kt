@@ -9,6 +9,9 @@ import androidx.navigation.findNavController
 import com.vladbystrov.findevent.R
 import com.vladbystrov.findevent.core.fragment.BaseFragment
 import com.vladbystrov.findevent.databinding.FragmentLoginBinding
+import com.vladbystrov.findevent.extensions.activityNavController
+import com.vladbystrov.findevent.extensions.navigateSafely
+import com.vladbystrov.findevent.start.data.UserData
 
 
 class LoginFragment : BaseFragment<FragmentLoginBinding>(
@@ -18,7 +21,10 @@ class LoginFragment : BaseFragment<FragmentLoginBinding>(
         super.onViewCreated(view, savedInstanceState)
 
         binding.registerButton.setOnClickListener {
-            view.findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+//            view.findNavController().currentDestination?.getAction(R.id.mainFlowFragment)?.let { navigate(actionId) }
+//            view.findNavController().navigate(R.id.action_global_mainFlowFragment)
+            UserData.isAuthorized = true
+            activityNavController().navigateSafely(R.id.action_global_mainFlowFragment)
         }
     }
 }

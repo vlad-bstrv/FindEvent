@@ -2,41 +2,26 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragment">
+    android:id="@+id/nav_graph">
+
+    <action
+        android:id="@+id/action_global_startFlowFragment"
+        app:destination="@id/startFlowFragment"
+        app:popUpTo="@id/nav_graph" />
+
+    <action
+        android:id="@+id/action_global_mainFlowFragment"
+        app:destination="@id/mainFlowFragment"
+        app:popUpTo="@id/nav_graph" />
+
     <fragment
-        android:id="@+id/mainFragment2"
-        android:name="com.vladbystrov.findevent.start.presentation.choice.ChoiceFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_choice" >
-        <action
-            android:id="@+id/action_mainFragment2_to_registerFragment"
-            app:destination="@id/registerFragment" />
-        <action
-            android:id="@+id/action_mainFragment2_to_loginFragment"
-            app:destination="@id/loginFragment" />
-    </fragment>
+        android:id="@+id/mainFlowFragment"
+        android:name="com.vladbystrov.findevent.main.MainFlowFragment"
+        android:label="fragment_main_flow"
+        tools:layout="@layout/fragment_main_flow"/>
     <fragment
-        android:id="@+id/registerFragment"
-        android:name="com.vladbystrov.findevent.start.presentation.register.RegisterFragment"
-        android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.vladbystrov.findevent.start.presentation.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
-        <action
-            android:id="@+id/action_loginFragment_to_homeFragment"
-            app:destination="@id/homeFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.vladbystrov.findevent.home.presenter.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/startFlowFragment"
+        android:name="com.vladbystrov.findevent.start.presentation.StartFlowFragment"
+        android:label="fragment_start_flow"
+        tools:layout="@layout/fragment_start_flow" />
 </navigation>

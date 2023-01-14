@@ -107,4 +107,23 @@
     <string name="past_event">Прошедшее</string>
     <string name="search">Поиск</string>
     <string name="moscow">Москва</string>
+    <string name="my_events">Мои мероприятия</string>
+    <string name="my_tickets">Мои билеты</string>
+    <string name="my_favorite_categories">Мои любимые категории</string>
+    <string name="exit">Выйти</string>
+    <string name="my_event">Мое мероприятие</string>
+    <string name="create_new_event">Создайте свое мероприятие</string>
+    <string name="name_event">Название</string>
+    <string name="acceptable_age">Допустимый возраст</string>
+    <string name="description">Описание</string>
+    <string name="date">Дата</string>
+    <string name="time">Время</string>
+    <string name="mood">Настроение</string>
+    <string name="place">Место проведения</string>
+    <string name="site">Адрес сайта</string>
+    <string name="type">Тип</string>
+    <string name="online">Онлайн</string>
+    <string name="offline">Офлайн</string>
+    <string name="price">Стоимость, руб</string>
+    <string name="create">Создать</string>
 </resources>

@@ -47,6 +47,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.loadData()
+
         viewModel.liveDataNews.observe(viewLifecycleOwner) {
             adapterNews.setNews(it)
         }

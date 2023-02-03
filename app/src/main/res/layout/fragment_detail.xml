@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".detail.presentation.DetailFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="230dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:src="@drawable/river" />
+
+                <TextView
+                    android:id="@+id/rating_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="16dp"
+                    android:textColor="@color/background_app"
+                    android:textSize="24sp"
+                    tools:text="8.3" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/event_photo_image_view"
+                style="@style/HeadTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/padding_main"
+                tools:text="Осенний забег 16+" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_main"
+                    android:src="@drawable/ic_calendar" />
+
+                <TextView
+                    android:id="@+id/date_event_text_view"
+                    style="@style/BodyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_main"
+                    tools:text="Вск, Окт.9" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_main"
+                    android:src="@drawable/ic_access_time" />
+
+                <TextView
+                    android:id="@+id/time_event_text_view"
+                    style="@style/BodyTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/padding_main"
+                    tools:text="12:00 - 13:00" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/location_text_view"
+                style="@style/BodyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_main"
+                android:layout_marginTop="@dimen/padding_main"
+                tools:text="Парк фили" />
+
+            <TextView
+                android:id="@+id/price_text_view"
+                style="@style/BodyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_main"
+                android:layout_marginTop="@dimen/padding_main"
+                tools:text="Бесплатно" />
+
+            <TextView
+                android:id="@+id/people_count_text_view"
+                style="@style/BodyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_main"
+                android:layout_marginTop="@dimen/padding_main"
+                tools:text="Идут 7" />
+
+            <TextView
+                android:id="@+id/description_text_view"
+                style="@style/BodyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_main"
+                android:layout_marginTop="@dimen/padding_main"
+                tools:text="Беги с нами! Беги с друзьями! Беги со всеми! Ждем тебя на нашем старте>" />
+
+            <TextView
+                style="@style/HeadTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_main"
+                android:layout_marginTop="@dimen/padding_main"
+                android:text="@string/place" />
+
+            <TextView
+                android:id="@+id/event_place_text_view"
+                style="@style/BodyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_main"
+                android:layout_marginTop="@dimen/padding_main"
+                tools:text="Большая Филевская ул.34" />
+
+            <TextView
+                android:id="@+id/comment_text_view"
+                style="@style/BodyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/padding_main"
+                android:layout_marginTop="@dimen/padding_main"
+                android:text="@string/comment_empty" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/comment_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/padding_main"
+                android:visibility="gone"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_comment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="16dp"
+                android:text="@string/add_comment"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/join_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:text="@string/join" />
+</FrameLayout>

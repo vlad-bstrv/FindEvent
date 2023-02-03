@@ -48,16 +48,20 @@ class RegisterFragment : BaseFragment<FragmentRegisterBinding>(
         }
 
         viewModel.registerLiveData.observe(viewLifecycleOwner){
-            when (it) {
-                is AppState.AppStateSuccess<*> -> {
-                    UserData.isAuthorized = true
-                    activityNavController().navigateSafely(R.id.action_global_mainFlowFragment)
-                }
-                is AppState.AppStateError -> {
+            setupUi(it)
+        }
+    }
 
-                }
-                AppState.AppStateLoading -> {}
+    private fun setupUi(it: AppState) {
+        when (it) {
+            is AppState.AppStateSuccess<*> -> {
+                UserData.isAuthorized = true
+                activityNavController().navigateSafely(R.id.action_global_mainFlowFragment)
             }
+            is AppState.AppStateError -> {
+
+            }
+            AppState.AppStateLoading -> {}
         }
     }
 

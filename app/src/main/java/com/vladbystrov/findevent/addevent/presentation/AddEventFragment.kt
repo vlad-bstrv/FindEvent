@@ -29,6 +29,8 @@ class AddEventFragment : BaseFragment<FragmentAddEventBinding>(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        val context = requireContext().applicationContext
+
         val acceptableAge = listOf("0+", "5+", "10+", "16+", "18+")
         val arrayAdapter = ArrayAdapter(requireActivity(), R.layout.item_age_spinner, acceptableAge)
         binding.autoCompleteTextView.setAdapter(arrayAdapter)
